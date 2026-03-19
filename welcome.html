@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>portal.coou.edu.ng</title>
+  <meta charset="UTF-8"/>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="welcome.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .menu-list .active-btn a{
+      background: #f0f0f0;
+      color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="menu-icon menu-btn" id="openMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <button class="login-btn"><a href="logins.html">Login</a></button>
+  </header>
+  
+  <div class="menu-overlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <button class="menu-close" id="closeMenu">×</button>
+    <ul class="menu-list">
+      <li><a href="welcome.html" class="active">Home</a></li>
+      <li><a href="#">Check Admission Status</a></li>
+      <li><a href="#">Sundry payments</a></li>
+      <li><a href="#">E-Bursary</a></li>
+      <li><a href="#">E-Certificate</a></li>
+      <li><a href="#">eTranscript</a></li>
+    </ul>
+  </div>
+  
+  <main>
+    <section class="hero">
+      <div class="hero-img">
+        <img src="images/hero-img.jpg" alt="students">
+      </div>
+    </section>
+    <section class="menu">
+      <div>
+        <h1>Programmes, Applications and <br>Payments</h1>
+        <p>Find all our authenticated applications and <br>registrations below for various student
+<br>types and programmes</p>
+      </div>
+  
+      <div>
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-1.jpg" alt="students">
+          </div>
+          <h2>Undergraduate</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Post Utme Application Invoice</p>
+          <p class="links">Fill Post Utme Application Form</p>
+          <p class="links">Generate Direct Entry Application Invoice</p>
+          <p class="link">Fill Direct Entry Application Form</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-2.jpg" alt="students">
+          </div>
+          <h2>Postgraduate</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="links">Track Application Status</p>
+          <p class="links">Generate Direct Entry Application Invoice</p>
+          <p class="link">Generate Fees Invoice</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-3.jpg" alt="students">
+          </div>
+          <h2>JUPEB</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="links">Fill Application Form</p>
+          <p class="link">Generate Fees Invoice</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-4.jpg" alt="students">
+          </div>
+          <h2>Part Time</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="link">Fill Application Form</p>
+        </div>
+        
+        <div class="card">
+          <div class="chain">
+            <img src="images/chain-img-5.jpg" alt="students">
+          </div>
+          <h2>Supplementary</h2>
+          <p class="select">Please select a link applicable to your needs from the categories below</p>
+          <p class="links">Generate Application Invoice</p>
+          <p class="link">Fill Application Form</p>
+        </div>
+      </div>
+    </section>
+    <section class="closing">
+      <p class="foot">Need help? - <span class="phone">08139833300</span></p>
+      <p class="since">Chukwuemeka Odumegwu Ojukwu University ©️ <br>2026</p>
+    </section>
+  </main>
+  <footer class="chat-footer">
+    <a href="#" class="chat-btn">Chat</a>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('openMenu');
+    const menuPanel = document.getElementById('menuPanel');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    menuBtn.addEventListener('click', () => {
+      menuPanel.classList.add('active');
+      menuOverlay.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      menuPanel.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      menuPanel.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

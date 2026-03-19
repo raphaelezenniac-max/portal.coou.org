@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>portal.coou.edu.ng</title>
+  <metacharset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <style>
+    .menu-list .active-btn a{
+      background: #f0f0f0;
+      color: #0b5ed7;
+    }
+    main {
+      margin-bottom: 150px
+    }
+  </style>
+</header>
+<body>
+  <header id="header">
+    <div class="menu-icon menu-btn" id="openMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span class="title">Results</span>
+    <img class="passport" src="images/profile-mj.jpg">
+  </header> 
+  
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="close-btn" id="closeMenu">&times;</span>
+      <div class="coou-img"></div>
+    </div>
+
+    <ul class="menu-list">
+      <h3>MODULES</h3>
+      <li><a href="dash.html">Dashboard</a></li>
+      <li><a href="acceptance.html">Acceptance</a></li>
+      <li><a href="fees.html">School Fees</a></li>
+      <li><a href="course.html">Course Registration</a></li>
+      <li class="active-btn"><a href="result.html">Results</a></li>
+      <li><a href="hostel-man.html">Hostel Managrment</a></li>
+      <li><a href="hostel.html">Hotel</a></li>
+      <li><a href="report.html">Reports</a></li>
+      <li><a href="school.html">School Setup</a></li>
+      <li><a href="course-man.html">Course Managrment</a></li>
+      <li><a href="sign-out.html">Sign Out</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section class="hero">
+      <h2>Results</h2>
+    </section>
+    <section class="view-screen">
+      <div class="score-div">
+        <p>CGPA</p>
+        <div class="outer">
+          <div class="ring">
+            <div class="inner">
+              <h2>3.25</h2>
+              <span>out of 5</span>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="results">
+      <div class="first-cell row">Results</div>
+      
+      <div class="results-wrapper">
+        <!-- Header -->
+        <div id="role" class="row">
+          <span>Session</span>
+          <span>Semester</span>
+          <span>Level</span>
+          <span>GPA</span>
+          <span></span>
+        </div>
+    
+        <!-- Row -->
+        <div class="row rows">
+          <div class="date">
+            <span>2023-</span>
+            <span>2024</span>
+          </div>
+          <span>First</span>
+          <div class="level">
+            <span>100</span>
+            <span>LEVEL</span>
+          </div>
+          <span>2.37</span>
+          <button class="view"><a href="result-1.html">View</a></button>
+        </div>
+    
+        <div class="row rows">
+          <div class="date">
+            <span>2023-</span>
+            <span>2024</span>
+          </div>
+          <span>Second</span>
+          <span>100 LEVEL</span>
+          <span>1.39</span>
+          <button class="view"><a href="result-1.html">View</a></button>
+        </div>
+        <div class="row rows">
+          <div class="date">
+            <span>2024-</span>
+            <span>2025</span>
+          </div>
+          <span>Frist</span>
+          <span>200 LEVEL</span>
+          <span>1.39</span>
+          <button class="view"><a href="result-1.html">View</a></button>
+        </div>
+        <div class="row rows">
+          <div class="date">
+            <span>2024-</span>
+            <span>2025</span>
+          </div>
+          <span>Second</span>
+          <span>200 LEVEL</span>
+          <span>1.39</span>
+          <button class="view"><a href="result-1.html">View</a></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="chat-footer">
+      <a href="#" class="chat-btn">Chat</a>
+  </footer>
+  
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const openBtn = document.getElementById("openMenu");
+    const closeBtn = document.getElementById("closeMenu");
+  
+    openBtn.onclick = () => {
+      sidebar.classList.add("show");
+    };
+  
+    closeBtn.onclick = () => {
+      sidebar.classList.remove("show");
+    };
+  </script>
+</body>
+</html>

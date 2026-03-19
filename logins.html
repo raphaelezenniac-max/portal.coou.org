@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOU Portal Login</title>
+    <link rel="stylesheet" href="logins.css">
+    <!-- Using Inter font for a clean, modern look -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Logo Section -->
+        <div class="header">
+            <img src="images/school-logo.jpg" alt="school-badge">
+            <h1>Welcome to COOU</h1>
+            <p class="subtitle">Access your portal</p>
+        </div>
+
+        <!-- Form Section -->
+        <form>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter password" required>
+                    <span class="lock-icon">🔒</span>
+                </div>
+            </div>
+
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <div class="footer-actions">
+                <p>New Student? <a href="#">Verify account</a></p>
+                <button type="submit" class="sign-in-btn">
+                  <a href="dash.html">Sign in</a>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <div class="chat-button">
+        Chat
+    </div>
+
+</body>
+</html>

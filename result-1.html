@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<head lang="en">
+  <title>portal.coou.edu.ng</title>
+  <metacharset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="result-1.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .menu-list .active-btn a {
+      background: #f0f0f0;
+      color: #0b5ed7;
+    }
+    
+    main {
+      width: 330vw;
+      height: 100vh; 
+      /*background-color: yellow;*/
+    } 
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+      margin-top: 4rem;
+      margin-bottom: 6rem;
+    }
+    
+    html, body {
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+    
+    #header {
+      height: var(--header-h);
+      background: rgb(255, 255, 255);
+      padding: 17px 17px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 3px rgb(235, 235, 235);
+    }
+    
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 20px;
+      height: 14px;
+      cursor: pointer;
+    /* background-color: green;*/
+    }
+    
+    .menu-icon span {
+      display: block;
+      height: 3px;
+      background-color: #000;
+    }
+    
+    .title {
+      border-left: 2px solid #eee;
+      padding-left: 10px;
+      margin-left: 50px;
+      /*background-color: red;*/
+    }
+    
+    .passport {
+      margin-left: auto;
+      background-image: url(image/profile-mj.jpg);
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      margin-left: auto;
+    }
+    
+    section {
+      width: auto;
+      height: auto;
+    }
+    
+    main > section:first-child {
+      padding: 100px 2px 50px 2px;
+      /*background-color: orange;*/
+    }
+    
+    main > section:first-child h2{
+      font-size: 16px;
+    }
+    
+    .wrap {
+      display: flex;
+      width: 100%;
+    }
+    
+    .heading {
+     /* background-color: skyblue;*/
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .heading > p {
+      color: #666;
+      font-weight: 500;
+    }
+    
+    .head-btn {
+      /*background-color: pink;*/
+      width: 50%;
+      display: flex;
+      position: relative;
+    }
+    
+    .head-btn > button{
+      background-color: green;
+      width: 3.5rem;
+      padding: 10px 10px;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    
+    
+    
+    
+    
+    
+    .first-cell {
+      text-align: center;
+      font-weight: bold;
+      width: 100%;
+      padding: 16px 12px;
+      background-color: #8af1b5;
+    }
+    
+    #role {
+      background-color: #b8ffd6;
+      color: #999;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 20px 0px 20px 20px;
+      display: grid;
+      grid-template-columns: 170px 380px 150px 150px 150px auto auto; 
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+    
+    /*.name {
+      background-color: pink;
+    }
+    
+    .naming {
+      background-color: orange;
+    } */
+    
+    /*.date, .level {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      background-color: purple;
+    }
+    */
+    
+    .view {
+      background-color: rgba(200, 200, 200,  0.1);
+      color: rgb(0, 100, 255);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 500;
+    
+      border-radius: 8px;     /* pill shape */
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .view:hover {
+      background: #d2e3fc;
+    }
+    
+    main > section:nth-child(3)  {
+      width: 100%;
+      /*background-color: pink;*/
+    }
+    
+    .results-wrapper {
+      width: 100%;
+    }
+    
+    .row {
+      display: grid;
+      grid-template-columns: 170px 380px 150px 150px 150px auto auto;  
+      align-items: center;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
+     /* background-color: brown;*/
+      font-size: 14px;
+      padding: 20px 0px 20px 20px;
+    }
+    
+    /*.row > :last-child {
+      padding-right: 12px;
+    }*/
+    
+    .rows {
+      
+    }
+    
+    /*.empty img {
+      width: 100%;
+      height: 250px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: orange;
+    }*/
+    
+    
+    
+    .chat-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      display: flex;
+      justify-content: flex-start;
+      z-index: 999;
+    }
+    
+    .chat-btn {
+      background: #e60000;
+      color: #fff;
+      padding: 12px 22px;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+    
+    .chat-btn:active {
+      transform: scale(0.96);
+    }
+    
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 200;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    
+    .sidebar.show {
+      transform: translateX(0);
+    }
+    
+    .close-btn {
+      font-size: 28px;
+      cursor: pointer;
+      border: none;
+      background: 
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      display: block;
+      margin-top: 10px;
+    }
+    
+    .sidebar-header {
+      height: var(--header-h);
+      padding: 0px 17px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 400;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .coou-img {
+      width: 200px;
+      height: 70px;
+      background-image: url(image/coou.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    
+    ul h3 {
+      font-size: 16px;
+      font-weight: 300;
+      color: #555;
+      margin-top: 0;
+    }
+    
+    .menu-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 100px;
+      margin-left: 30px;
+    }
+    
+    .menu-list li a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #666;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+      display: block;
+      font-weight: 600;
+      -webkit-tap-highlight-color: transparent; /* for mobile browsers */
+    }
+               /* END */
+    
+    
+    
+               /*result-1*/
+    
+    /* Container Styles */
+    main > section:nth-child(2) {
+      /*background-color: purple;*/
+    }
+    
+    .result-container {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      /*background-color: blue;*/
+    }
+    
+    /* Header/Logo Section */
+    .brand-section {
+      text-align: center;
+      /*background-color: grey;*/
+    }
+    
+    .logo {
+      width: 200px;
+      height: auto;
+    }
+    
+    /* Layout Wrapper */
+    .profile-wrapper {
+      display: flex;
+      align-items: flex-start; /* Aligns image to the top of the grid */
+      gap: 250px; /* Space between image and text */
+      /*background-color: brown;*/
+      margin: 40px 20px 40px 20px;
+      height: 180px;
+    }
+    
+    /* Student Photo Styling */
+    .student-photo img {
+      width: 170px; /* Adjust size as needed */
+      height: 170px;
+      background-size: cover;
+    }
+    
+    /* Grid Layout (Right side) 
+    .student-info-grid {
+      flex-grow: 1;  Makes the grid take up remaining width
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 12px;
+    } */
+    
+    
+    /* Grid Layout */
+    .student-info-grid {
+      width: 100%;
+      height: 180px;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      column-gap: 50px;
+      row-gap: 15px;
+      /*background-color: pink;*/
+    }
+    
+    .info-group {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 1rem;
+      /*background-color: green;*/
+    }
+    
+    .label {
+      font-weight: 600;
+      width: 100px;
+      display: flex;
+      /*background-color: orange;*/
+    }
+    
+    .centering {
+      align-items: center;
+    }
+    
+    .value {
+      font-weight: bold;
+      text-transform: uppercase;
+      /*background-color: purple;*/
+    }
+    
+    /* Mobile Responsiveness 
+    @media (max-width: 600px) {
+      .student-info-grid {
+        grid-template-columns: 1fr; /* Stack to one column */
+    /*  }
+    }
+    */
+    
+    /*.chat-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      display: flex;
+      justify-content: flex-start;
+      z-index: 999;
+    }
+    
+    .chat-btn {
+      background: #e60000;
+      color: #fff;
+      padding: 12px 22px;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+    
+    .chat-btn:active {
+      transform: scale(0.96);
+    } 
+    */
+    
+    main > section:last-child {
+      /*background-color: red;*/
+    }
+    
+    .foot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      padding: 20px auto;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .foots img {
+      width: 170px; /* Adjust size as needed */
+      object-fit: cover;
+    }
+    
+    .copyright {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px 0px 70px 0px;
+    }
+  </style>
+</header>
+<body>
+  <header id="header">
+    <div class="menu-icon menu-btn" id="openMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span class="title">Results</span>
+    <div class="passport"></div>
+  </header>
+  
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="close-btn" id="closeMenu">&times;</span>
+      <div class="coou-img"></div>
+    </div>
+
+    <ul class="menu-list">
+      <h3>MODULES</h3>
+      <li><a href="dash.html">Dashboard</a></li>
+      <li><a href="acceptance.html">Acceptance</a></li>
+      <li><a href="fees.html">School Fees</a></li>
+      <li><a href="course.html">Course Registration</a></li>
+      <li class="active-btn"><a href="result.html">Results</a></li>
+      <li><a href="hostel-man.html">Hostel Managrment</a></li>
+      <li><a href="hostel.html">Hotel</a></li>
+      <li><a href="report.html">Reports</a></li>
+      <li><a href="school.html">School Setup</a></li>
+      <li><a href="course-man.html">Course Managrment</a></li>
+      <li><a href="sign-out.html">Sign Out</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section>
+      <div class="wrap">
+        <div class="heading">
+          <p>Results/ 2023-2024 First Semester</p>
+          <h2>Results</h2>
+        </div>
+        <div class="head-btn">
+          <button>Print</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="result-container">
+  <!-- Brand Header -->
+        <div class="brand-section">
+          <img src="images/coou.jpg" alt="University Logo" class="logo">
+        </div>
+        
+        <div class="profile-wrapper">
+    <!-- Student Photo -->
+          <div class="student-photo">
+            <img src="images/profile-mj.jpg" alt="Student Photo">
+          </div>
+      
+        <!-- Student Info Grid -->
+          <div class="student-info-grid">
+            <div class="info-group">
+              <span class="label">Full Name:</span>
+              <span class="value">EZENNIA RAPHEAL CHUKWUDI</span>
+            </div>
+            <div class="info-group">
+              <span class="label">Matric No:</span>
+              <span class="value">2023015023</span>
+            </div>
+            <div class="info-group">
+              <span class="label">Faculty:</span>
+              <span class="value">AGRICULTURE</span>
+            </div>
+            <div class="info-group">
+              <span class="label centering">Department:</span>
+              <span class="value">AGRICULTURAL ECONOMICS & <br>EXTENSION</span>
+            </div>
+            <div class="info-group">
+              <span class="label">Entry Mode:</span>
+              <span class="value">UTME</span>
+            </div>
+            <div class="info-group">
+              <span class="label">Level:</span>
+              <span class="value">100 LEVEL</span>
+            </div>
+            <div class="info-group">
+              <span class="label">Session:</span>
+              <span class="value">2023-2024</span>
+            </div>
+            <div class="info-group">
+              <span class="label">Semester:</span>
+              <span class="value">First Semester</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section>
+      <div class="first-cell">2023-2024 FIRST SEMESTER RESULTS</div>
+      <div id="role">
+        <span class="name">Course Code</span>
+        <span class="naming">Course Title</span>
+        <span class="name">Course Unit</span>
+        <span class="naming">Total Score</span>
+        <span class="name">Exam Score</span>
+        <span class="naming">Total</span>
+        <span class="name">Grade</span>
+      </div>
+      
+      <div class="results-wrapper">
+        <!-- Row -->
+        <div class="row rows">
+          <span class="name">PHY107.</span>
+          <span class="naming">GENERAL PHYSICS PRACTICAL I.</span>
+          <span class="name">1</span>
+          <span class="naming">21</span>
+          <span class="name">55</span>
+          <span class="naming">76</span>
+          <span class="name">A</span>
+        </div>
+    
+        <div class="row rows">
+          <span>PHY107.</span>
+          <span>GENERAL PHYSICS PRACTICAL I.</span>
+          <span>1</span>
+          <span>21</span>
+          <span>55</span>
+          <span>76</span>
+          <span>A</span>
+        </div>
+        <div class="row rows">
+          <span>PHY107.</span>
+          <span>GENERAL PHYSICS PRACTICAL I.</span>
+          <span>1</span>
+          <span>21</span>
+          <span>55</span>
+          <span>76</span>
+          <span>A</span>
+        </div>
+        <div class="row rows">
+          <span>PHY107.</span>
+          <span>GENERAL PHYSICS PRACTICAL I.</span>
+          <span>1</span>
+          <span>21</span>
+          <span>55</span>
+          <span>76</span>
+          <span>A</span>
+        </div>
+        <div class="row rows">
+          <span>PHY107.</span>
+          <span>GENERAL PHYSICS PRACTICAL I.</span>
+          <span>1</span>
+          <span>21</span>
+          <span>55</span>
+          <span>76</span>
+          <span>A</span>
+        </div>
+        <div class="row rows">
+          <span>PHY107.</span>
+          <span>GENERAL PHYSICS PRACTICAL I.</span>
+          <span>1</span>
+          <span>21</span>
+          <span>55</span>
+          <span>76</span>
+          <span>A</span>
+        </div>
+        <div class="row rows">
+          <span>PHY107.</span>
+          <span>GENERAL PHYSICS PRACTICAL I.</span>
+          <span>1</span>
+          <span>21</span>
+          <span>55</span>
+          <span>76</span>
+          <span>A</span>
+        </div>
+        <div class="row rows">
+          <span></span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>GPA</span>
+          <span>3.01</span>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="foot">
+        <div class="foots">
+          <img src="images/scan-code.jpg" alt="Scan Code">
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright ©️ 2026 Chukwuemeka Odumegwu Ojukwu University</p>
+        <p>Powered by Tenece Professional Services</p>
+      </div>
+    </section>
+  </main>
+  <footer class="chat-footer">
+      <a href="#" class="chat-btn">Chat</a>
+  </footer>
+  
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const openBtn = document.getElementById("openMenu");
+    const closeBtn = document.getElementById("closeMenu");
+  
+    openBtn.onclick = () => {
+      sidebar.classList.add("show");
+    };
+  
+    closeBtn.onclick = () => {
+      sidebar.classList.remove("show");
+    };
+  </script>
+</body>

@@ -1,0 +1,322 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+html, body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+        /*HEADER*/
+#header {
+  height: var(--header-h);
+  background: rgb(255, 255, 255);
+  padding: 13px 17px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 3px rgb(235, 235, 235);
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 13px;
+  cursor: pointer;
+  /*background-color: green;*/
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background-color: #000;
+}
+
+.login-btn {
+  margin-left: auto;
+  background-color: rgb(0, 80, 255);
+  padding: 11px 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.login-btn a {
+  color: rgb(255,255,255);
+  text-decoration: none;
+}
+
+        /*HERO SECTION*/
+
+.hero {
+  margin-top: 4rem;
+  /*background-color: blue;*/
+}
+.hero-img {
+  position: relative;   /* IMPORTANT */
+  width: 100%;
+  /*max-width: 400px; */    /* optional */
+}
+
+.hero-img img {
+  display: block;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+        /*MENU SECTION*/
+
+.menu {
+  /*background: pink;*/
+}
+
+.menu > div:first-child {
+  width: 100%;
+  height: auto;
+  display: flex;
+  /*justify-content: center;
+  align-items: center;*/
+  text-align: center;
+  flex-direction: column;
+  column-gap: 2px;
+  padding: 80px 10px;
+}
+
+.menu > div:first-child h1 {
+  font-size: 1.4rem; /* ≈ 25px */
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.menu > div:first-child p {
+  font-size: 1rem;     /* makes it close to Acode */
+  line-height: 1.4;    /* tighter spacing between lines */
+  text-align: center;  /* center like your preview */
+  margin-top: 15px;
+}
+
+        /*Cards Section*/
+
+
+.menu > div:nth-child(2) {
+  background: rgb(241,241,241);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px 20px 40px 20px;
+  border-radius: 20px;
+}
+
+.card {
+  background: rgb(255,255,255);
+  padding: 45px 20px;
+  border-radius: 10px;
+}
+
+.chain {
+  margin-bottom: 30px;
+}
+
+.chain img{
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*.card h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}*/
+
+.card h2 {
+  font-size: 1.1rem;       /* smaller, like Acode */
+  line-height: 1.2;        /* tighter spacing */
+  margin-bottom: 0.75rem;  /* reduces gap below heading */
+}
+
+.select {
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.links {
+  /*background: grey;*/
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(0, 80, 255);
+  margin-bottom: 12px;
+}
+
+.link {
+  font-size: 14px;
+  color: rgb(0, 80, 255);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.closing {
+  margin-top: 8rem;
+}
+
+.foot {
+  color: rgb(100, 100, 100);
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.phone {
+  color: rgb(0, 153, 51);
+}
+
+.since {
+  color: rgb(100, 100, 100);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align: center;
+}
+
+.chat-footer {
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 14px 0px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 999;
+}
+
+.chat-btn {
+  background: #e60000;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  /*border-radius: 4px;*/
+  text-decoration: none;
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.25);*/
+}
+
+.chat-btn:active {
+  transform: scale(0.96);
+}
+
+        /*NAV SECTION/*
+
+/* MENU PANEL */
+.menu-panel {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: top 0.4s ease-in-out;
+  padding: 2.5rem 2.5rem;
+}
+
+/* Slide down when active */
+.menu-panel.active {
+  top: 0;
+}
+
+/* Close button */
+.menu-close {
+  /*position: absolute;
+  top: 0.5rem;
+  left: 1rem;*/
+  background: none;
+  color: rgb(34, 34, 34);
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Menu overlay
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  z-index: 400;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+} */
+
+/* Menu list */
+.menu-list {
+  list-style: none;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+}
+
+.menu-list li {
+  padding: 0.75rem 0;
+}
+
+.menu-list li .active {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(34, 34, 34);
+  font-weight: 500;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgba(34, 34, 34, 0.6);
+  font-weight: 500;
+}
